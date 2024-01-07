@@ -11,3 +11,87 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-img {
+  background-image: url("homebg.jpg");
+  min-height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  margin: 0vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  height: 10vh;
+}
+
+.navbar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo {
+  width: 20vh;
+  margin: 0 10vh;
+}
+
+.Nav-links {
+  flex-grow: 1;
+
+}
+
+.Nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.Nav-links li {
+  list-style: none;
+  margin: 0vh 5vh;
+  cursor: pointer;
+}
+.Nav-links li:hover {
+  font-weight: 700;
+}
+
+.navbar::after,
+.Nav-links li,
+.logo {
+  opacity: 1;
+}
+
+.Nav-links li::before {
+  display: block;
+  content: attr(title);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.Nav-links li:after {
+  content: '';
+  margin: auto;
+  display: block;
+  margin-top: 1vh;
+  height: 0.1vh;
+  width: 0%;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.Nav-links li:hover:after {
+  width: 100%;
+  background-color: #FF8000;
+}
+/*/Your perfect stay, simplified.*/
