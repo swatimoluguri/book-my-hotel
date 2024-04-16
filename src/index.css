@@ -1,14 +1,16 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -19,6 +21,46 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.bg-text {
+  color: white;
+  font-size: 5vh;
+  top: 40%;
+  transform: translateY(-50%);
+  right: 5%;
+  position: absolute;
+}
+.animate-charcter {
+  padding-left: 1vh;
+  padding-right: 1vh;
+  background-image: linear-gradient(
+    -225deg,
+    #ff8000 0%,
+    #ffa042 29%,
+    #ffc78f 67%,
+    #ffffff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .navbar {
@@ -46,7 +88,6 @@ code {
 
 .Nav-links {
   flex-grow: 1;
-
 }
 
 .Nav-links ul {
@@ -80,7 +121,7 @@ code {
 }
 
 .Nav-links li:after {
-  content: '';
+  content: "";
   margin: auto;
   display: block;
   margin-top: 1vh;
@@ -92,6 +133,648 @@ code {
 
 .Nav-links li:hover:after {
   width: 100%;
-  background-color: #FF8000;
+  background-color: #ff8000;
 }
-/*/Your perfect stay, simplified.*/
+a {
+  text-decoration: none;
+  color: white;
+}
+.awardNumbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
+  color: white;
+}
+.box {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.box p {
+  margin: 0;
+  padding: 0;
+}
+
+.apartments {
+  background-color: #1a2a2a;
+}
+.customers {
+  background-color: #132121;
+}
+.cities {
+  background-color: #091212;
+}
+.awardIcons {
+  padding-right: 2vh;
+  transform: scale(3);
+}
+.awardFigures {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #ff8000;
+}
+
+.searchInput {
+  margin: 1.5vh;
+  display: flex;
+  background-color: white;
+  color: #1a2a2a;
+  width: 15vw;
+  border-radius: 5vh;
+  border: none;
+  height: 6vh;
+  border: 1px solid transparent;
+  outline: none;
+}
+.location {
+  padding-left: 1vh;
+  vertical-align: middle;
+}
+.dates {
+  padding-left: 2vh;
+  cursor: pointer;
+}
+.searchInput:hover {
+  border: 1px solid #ff8000;
+}
+.searchButton {
+  margin: 1.5vh;
+  border: none;
+  padding: 0 3vh;
+  border-radius: 5vh;
+  background-color: #ff8000;
+  color: white;
+  font-size: x-large;
+  cursor: pointer;
+}
+.react-datepicker {
+  cursor: pointer;
+  padding-top: 2vh;
+}
+.react-datepicker__navigation-icon {
+  margin-top: 2vh;
+}
+
+.searchDiv {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1vh;
+}
+.searchInput,
+.dates,
+.searchButton {
+  height: 6vh;
+}
+.booking-datepicker {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-picker-label {
+  margin-bottom: 5px;
+  font-size: large;
+}
+
+.react-datepicker {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.react-datepicker__header {
+  background-color: #f0f0f0;
+  display: inline;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-around;
+}
+
+.react-datepicker__day {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f0f0f0;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.suggestions {
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #1a2a2a;
+  margin-bottom: 5vh;
+}
+.suggestions h1 {
+  padding-bottom: 1vh;
+  border-bottom: 3px solid #ff8000;
+}
+.suggestions p {
+  color: #676767;
+  font-size: large;
+}
+.photoGrid {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+.photoGridItem {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(210, 210, 210);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s linear 0.5s;
+  margin-bottom: 5vh;
+  height: 5vh;
+  padding: 0 2vh;
+}
+.headingSuggestions {
+  font-size: xx-large;
+  border-bottom: 2px solid #ff8000;
+  padding-bottom: 2vh;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+.photoGridImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.photoGridImg:hover {
+  transition: 0.5s ease all;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.imageTitleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 100%;
+}
+.imageTitle {
+  color: white;
+  margin: 0;
+  bottom: 0;
+  padding: 1vh;
+  font-size: x-large;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.our-story {
+  color: #1a2a2a;
+  display: flex;
+  flex-direction: column;
+}
+.story-headings {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.our-story p {
+  line-height: 2;
+  font-weight: 500;
+  color: #676767;
+  font-size: large;
+}
+.story-container {
+  padding: 10vh;
+  display: flex;
+  gap: 10vh;
+}
+.story-img {
+  height: 40vh;
+  width: 200vh;
+}
+.story-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.story-header {
+  font-size: xx-large;
+}
+.highlight {
+  color: #ff8000;
+  font-weight: bold;
+}
+.story-button {
+  background-color: #1a2a2a;
+  color: white;
+  border: none;
+  padding: 2vh;
+}
+.discount-banner {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+.discount-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.discount-banner h1 {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  transform: translate(-10%, -40%);
+  color: white;
+  font-size: 8vh;
+}
+.center {
+  text-align: center;
+}
+.fieldset {
+  margin: auto;
+  width: 60vh;
+  background-color: #1a2a2a;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.fields {
+  border: none;
+  border-bottom: 2px solid #e2e2e2;
+  background-color: transparent;
+  padding: 2vh 4vh;
+  margin: 3vh 5vh;
+  color: #e2e2e2;
+  font-size: larger;
+  outline: none;
+}
+.fields:focus {
+  border-bottom: 2px solid #ff8000;
+  color: #ff8000;
+}
+
+.fields::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: large;
+  opacity: 1;
+}
+
+.fields::-ms-input-placeholder {
+  color: rgb(255, 255, 255);
+  font-size: large;
+  opacity: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  margin: 3vh 0vh;
+  padding: 12px;
+  width: 240px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #ff8000;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.stb_line_single {
+  overflow-x: hidden;
+  position: relative;
+  white-space: wrap;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.stb-item {
+  border: 1px solid #1a2a2a;
+  padding: 3vh;
+  font-size: 18px;
+  margin: 0 2vh;
+  color: #1a2a2a;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 1vh;
+}
+.stb-item:hover {
+  color: #ff8000;
+}
+#reviewImg {
+  border-radius: 50%;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  height: 250px;
+}
+.reviews {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: "hidden";
+}
+.name-reviewer {
+  display: flex;
+  justify-content: space-between;
+}
+.stb-item p {
+  text-align: justify;
+}
+.footer-container {
+  padding-top: 10vh;
+  margin-top: 5vh;
+  height: 50vh;
+  background-image: url("./assets/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.logo-footer {
+  width: 30%;
+  margin-left: 5vw;
+}
+.logo-footer img {
+  width: 60%;
+}
+.footer-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-blogs img {
+  width: 50px;
+  margin: 2vh;
+}
+.footer-blogs li {
+  padding: 1vh;
+  list-style: none;
+  font-size: large;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.footer-blogs li:hover {
+  font-weight: 700;
+}
+
+.footer-blogs li::before {
+  display: block;
+  content: attr(title);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.footer-blogs li:after {
+  content: "";
+  margin: auto;
+  display: block;
+  margin-top: 1vh;
+  height: 0.1vh;
+  width: 0%;
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+
+.footer-blogs li:hover:after {
+  width: 100%;
+  background-color: #ff8000;
+}
+.footer-blogs-links {
+  display: flex;
+}
+.footer-blogs-links img {
+  cursor: pointer;
+}
+.copyright {
+  color: white;
+  margin-top: 10vh;
+  text-align: center;
+}
+.review-stars{
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    height: 18vh;
+  }
+
+  .bg-text {
+    font-size: 3vh;
+    top: 25%;
+    right: 5%;
+    transform: translateX(50%);
+  }
+  .satisfy-regular {
+    transform: translateX(-50%);
+  }
+
+  .logo {
+    width: 20vh;
+    margin: auto;
+  }
+
+  .Nav-links li {
+    margin: 0vh 3vh;
+  }
+  .searchDiv {
+    background-color: rgba(255, 255, 255, 0.4);
+    flex-direction: column;
+    padding: 1vh;
+    width: fit-content;
+  }
+  .searchInput,
+  .dates,
+  .searchButton {
+    width: 30vw;
+  }
+  .react-datepicker__navigation-icon {
+    margin-top: -2vh;
+  }
+
+  .awardNumbers {
+    flex-direction: column;
+    height: 70vh;
+  }
+  .box {
+    width: 100vw;
+  }
+  .box p {
+    width: min-content;
+  }
+
+  .photoGrid {
+    gap: 2vh;
+  }
+  .photoGridItem {
+    height: 200px;
+    width: 200px;
+  }
+  .imageTitle {
+    font-size: medium;
+  }
+  .story-headings {
+    width: 80%;
+  }
+  .our-story p {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: small;
+  }
+  .story-container {
+    padding: 2vh;
+    gap: 3vh;
+  }
+  .story-img {
+    height: 30vh;
+    width: 200vh;
+  }
+  .story-header {
+    font-size: x-large;
+  }
+  .story-button {
+    padding: 1vh;
+  }
+
+  .discount-banner h1 {
+    left: 20%;
+    font-size: 5vh;
+  }
+
+  .fieldset {
+    width: 50vh;
+  }
+  .headingSuggestions {
+    padding: 2vh;
+    text-align: center;
+  }
+  #reviewImg {
+    width: 150px;
+    height: 150px;
+  }
+  .stb-item p {
+    font-size: small;
+  }
+  .stb-item {
+    padding: 2vh;
+    font-size: 15px;
+  }
+
+#reviewImg {
+  width: 250px;
+  height: 250px;
+}
+
+.name-reviewer {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  flex-direction: column;
+}
+
+.logo-footer {
+  width: 90%;
+  margin: auto;
+}
+
+.footer-links {
+  width: 90%;
+}
+
+.footer-blogs h2{
+  font-size: medium;
+}
+.footer-blogs img {
+  width: 30px;
+  margin: 1vh;
+}
+
+.footer-blogs li {
+  padding: 0vh;
+  font-size: small;
+  list-style-type: none;
+}
+
+.copyright {
+  margin-top: 6vh;
+}
+
+}
