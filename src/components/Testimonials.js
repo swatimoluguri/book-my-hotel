@@ -12,7 +12,7 @@ const Testimonials = () => {
       const links = line.querySelectorAll("a"),
         tl = horizontalLoop(links, {
           speed: speed,
-          reversed: false,
+          reversed: true,
           repeat: -1,
         });
 
@@ -138,9 +138,19 @@ const Testimonials = () => {
       <div className="stb_line_single">
         {reviewer.map((review) => (
           <a href="#" className="stb-item">
-            <img id="reviewImg" src={review.getImageSrc()} alt={review.title} />
+            <div>
+              <img
+                id="reviewImg"
+                src={review.getImageSrc()}
+                alt={review.title}
+              />
+            </div>
+
             <div className="name-reviewer">
-              <h4>{review.title}</h4>
+              <div>
+                <h4>{review.title}</h4>
+              </div>
+
               <div className="review-stars">
                 <p>
                   <b>{review.rating}</b>
